@@ -10,7 +10,7 @@ This is a CLI tool that makes request to a Discourse API. This utilizes the `[di
 
 1. Clone the repository.
 2. Run `bundle install`.
-3. Copy `discourse.env.sample` and set your desired `DISCOURSE_API` and `DISCOURSE_API_KEY` variables.
+3. Copy `discourse.env.sample` as `discourse.env` and set your desired `DISCOURSE_API` and `DISCOURSE_API_KEY` variables.
 
 ## How To Use
 
