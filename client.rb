@@ -17,9 +17,13 @@ client.api_key = ENV['DISCOURSE_API_KEY']
 client.api_username = opts[:username] if opts[:username]
 
 params = begin
-  JSON.parse(opts[:params], symbolize_names: true)
+  JSON.parse(opts[:params], symbolize_names: true) if opts[:params]
 rescue JSON::ParserError
-  opts[:oarams]
+  opts[:params]
 end
 
-puts client.send(opts[:endpoint], params)
+if params
+  puts client.send(opts[:endpoint], params)
+else
+  puts client.send(opts[:endpoint])
+end
